@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="css/select2.min.css" />
     <link rel="stylesheet" href="css/jquery.fancybox.min.css" />
     <link rel="stylesheet" href="css/style.css">
+
     <style>
         /* Add this CSS to hide toggle-text and show toggle-logo initially */
         .toggle-text {
@@ -22,6 +23,14 @@
 
         .toggle-logo {
             display: block;
+        }
+    </style>
+
+    <style>
+        .small-svg {
+            position: absolute;
+            top: 0;
+            left: 0;
         }
     </style>
 
@@ -45,7 +54,7 @@
                     <img src="img/logo.png" alt="logo" class="logo">
                     <h1 class="title bg swing wow">أرقام تتحدث عن إنجازات عام ٢٠٢٣</h1>
                 </div>
-                <div class="section-svg">
+                <div class="section-svg position-relative">
 
                     <div id="imageContainer">
                         <img src="img/layer1.png" class="active" />
@@ -53,11 +62,13 @@
                         <img src="img/layer3.png" style="display: none;" />
                         <img src="img/layer4.png" style="display: none;" />
                         <img src="img/layer5.png" style="display: none;" />
-
-                        <!-- Add more images as needed -->
                     </div>
+
+
+
+                            
                     
-                    <!-- <div id="chart">
+                    <!-- <div id="line_chart">
                     </div> -->
                 </div>
             </div>
@@ -314,7 +325,7 @@
         </div>
         <div class="copy-right">
             <div class="container text-center">
-                <div class="right">جميع الحقوق محفوظة لموقع تسكن</div>
+                <div class="right">جميع الحقوق محفوظة لشركة أوامر الشبكة</div>
             </div>
         </div>
     </footer>
@@ -451,64 +462,49 @@
         // line chart
 
         // var options = {
-        //     series: [{
-        //         name: 'Sales',
-        //         //   data: [4, 3, 10, 9, 29, 19, 22, 9, 12, 7, 19, 5, 13, 9, 17, 2, 7, 5]
-        //         //   data: [112, 149, 57, 40, 120, 90, 50, 70, 15, 30]
-        //         data: [0, 112, 149, 57, 40, 70, 90, 50, 70, 15, 30]
-        //     }],
-        //     chart: {
-        //         height: 350,
-        //         type: 'line',
-        //     },
-        //     forecastDataPoints: {
-        //         count: 7
-        //     },
-        //     stroke: {
-        //         width: 8,
-        //         curve: 'smooth'
-        //     },
-
-        //     // xaxis: {
-        //     //   type: 'datetime',
-        //     //   categories: ['1/11/2000', '2/11/2000', '3/11/2000', '4/11/2000', '5/11/2000', '6/11/2000', '7/11/2000', '8/11/2000', '9/11/2000', '10/11/2000', '11/11/2000', '12/11/2000', '1/11/2001', '2/11/2001', '3/11/2001','4/11/2001' ,'5/11/2001' ,'6/11/2001'],
-        //     //   tickAmount: 10,
-        //     //   labels: {
-        //     //     formatter: function(value, timestamp, opts) {
-        //     //       return opts.dateFormatter(new Date(timestamp), 'dd MMM')
-        //     //     }
-        //     //   }
-        //     // },
-
-        //     title: {
-        //         text: 'Forecast',
-        //         align: 'left',
-        //         style: {
-        //             fontSize: "16px",
-        //             color: '#666'
-        //         }
-        //     },
-        //     fill: {
-        //         type: 'gradient',
-        //         gradient: {
-        //             shade: 'dark',
-        //             gradientToColors: ['#FDD835'],
-        //             shadeIntensity: 1,
-        //             type: 'horizontal',
-        //             opacityFrom: 1,
-        //             opacityTo: 1,
-        //             stops: [0, 100, 100, 100]
-        //         },
-        //     },
-        //     yaxis: {
-        //         min: -10,
-        //         max: 450
-        //     }
+        //   series: [{
+        //   name: 'Sales',
+        //   data: [4, 3, 10, 9, 29, 19, 22, 9, 12, 7, 19, 5, 13, 9, 17, 2, 7, 5]
+        // }],
+        //   chart: {
+        //   type: 'line',
+        // },
+        // forecastDataPoints: {
+        //   count: 7
+        // },
+        // stroke: {
+        //   width: 5,
+        //   curve: 'smooth'
+        // },
+        // title: {
+        //   text: 'Forecast',
+        //   align: 'left',
+        //   style: {
+        //     fontSize: "16px",
+        //     color: '#666'
+        //   }
+        // },
+        // fill: {
+        //   type: 'gradient',
+        //   gradient: {
+        //     shade: 'dark',
+        //     gradientToColors: [ '#FDD835'],
+        //     shadeIntensity: 1,
+        //     type: 'horizontal',
+        //     opacityFrom: 1,
+        //     opacityTo: 1,
+        //     stops: [0, 100, 100, 100]
+        //   },
+        // },
+        // yaxis: {
+        //   min: -10,
+        //   max: 40
+        // }
         // };
 
-        // var chart = new ApexCharts(document.querySelector("#chart"), options);
+        // var chart = new ApexCharts(document.querySelector("#line_chart"), options);
         // chart.render();
-
+        
         // circle chart
 
         var options = {

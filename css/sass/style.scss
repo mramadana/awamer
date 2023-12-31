@@ -190,9 +190,15 @@ body {
   width: 45px;
 }
 
-// .apexcharts-grid, .apexcharts-grid-borders, .apexcharts-text, .apexcharts-xaxis-tick, .apexcharts-title-text, .apexcharts-toolbar, .apexcharts-xcrosshairs {
-//   display: none !important;
-// }
+#line_chart {
+  width: 500px;
+  height: 350px;
+  margin: 0 auto;
+}
+
+.apexcharts-grid, .apexcharts-grid-borders, .apexcharts-text, .apexcharts-xaxis-tick, .apexcharts-title-text, .apexcharts-toolbar, .apexcharts-xcrosshairs {
+  display: none !important;
+}
 
 .main-title {
   font-size: 27px;
